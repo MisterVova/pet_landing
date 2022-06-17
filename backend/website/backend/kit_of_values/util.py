@@ -34,11 +34,9 @@ class Node:
 
         key = lst_key.pop(0)
         child = self.get_child_by_key(key=key)
-        # print("get_child_by_key", key , child)
         child.add_value(lst_key, value)
 
     def get_child_by_key(self, key):
-        # print("get_child_by_key", key,)
         if self.is_list_key(key):
             self.is_list = True
 
@@ -62,29 +60,23 @@ class Node:
 
     def get_dict(self):
         if (len(self.child_dict) + len(self.child_list)) == 0:
-            # return {self.key: self.value}
             return self.value
         dct = {}
         lst = []
-        # self.child_list.values()
+
         if len(self.child_list) != 0:
             keys = [*self.child_list.keys()]
-            # print(self.key,keys)
             keys.sort()
             for k in keys:
-            # for k in self.child_list.keys():
                 lst.append(self.child_list[k].get_dict())
 
         if len(self.child_dict) != 0:
             keys = [*self.child_dict.keys()]
             keys.sort()
             for k in keys:
-            # for k in self.child_dict.keys():
                 dct.update({k: self.child_dict[k].get_dict()})
 
         ret = dict()
-
-        # if (len(self.child_dict) + len(self.child_list) + 1 if self.value else 0) == 0:
 
         if self.value != None:
             ret["value"] = self.value
