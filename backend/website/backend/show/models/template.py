@@ -8,7 +8,7 @@ class Template(models.Model):
     title = models.CharField(verbose_name="Заголовок", max_length=64)
     description = models.TextField(verbose_name="Описание", null=True)
     template = models.TextField(verbose_name="HTML Шаблон", blank="", null=True)
-    slug = models.SlugField(max_length=150, verbose_name='ЧПУ', blank=True, default='', db_index=True, unique=True)
+    slug = models.SlugField(max_length=150, verbose_name='ЧПУ', blank=True, db_index=True, unique=True)
 
     def __str__(self):
         return f"{self.destiny} | {self.title}"
