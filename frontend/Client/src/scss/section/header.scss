@@ -1,0 +1,35 @@
+.header {
+  &__inner {
+    color: $white;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__nav {
+    display: flex;
+    margin-left: auto;
+    &-list {
+      margin-left: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: end;
+    }
+    &-item {
+      padding-top: 5px;
+    }
+    &-item + &-item {
+      margin-left: 60px;
+    }
+    &-item-link {
+      font-family: 'MullerLight', sans-serif;
+      color: $black;
+    }
+
+    .link-tel {
+      margin-left: 100px;
+      font-family: 'MullerBold', sans-serif;
+      color: $black;
+    }
+  }
+}

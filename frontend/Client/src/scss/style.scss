@@ -1,0 +1,18 @@
+/*Global*/
+
+@import 'fonts';
+@import './global/variables';
+@import './global/default';
+@import './global/normalaize';
+@import './global/title';
+/*Components*/
+/*Modals*/
+@import './modal/burger';
+@import './modal/slider';
+
+/*Sections*/
+@import './section/header';
+@import './section/main';
+@import './section/problem';
+@import './section/team';
+@import './section/footer';

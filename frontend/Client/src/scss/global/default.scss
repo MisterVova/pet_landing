@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: $white;
+}
+
+body {
+  font-family: 'MullerRegular', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+}
+body._lock {
+  overflow: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1760px;
+  padding: 0 20px;
+}

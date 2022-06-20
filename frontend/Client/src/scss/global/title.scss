@@ -1,0 +1,73 @@
+.title1 {
+  color: $black;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 100px;
+  line-height: 120%;
+}
+
+.title2 {
+  color: $black;
+  font-family: 'MullerBold', sans-serif;
+  font-size: 100px;
+  line-height: 120%;
+}
+
+.title3 {
+  color: $black;
+  font-family: 'MullerBold', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 44px;
+  line-height: 130%;
+}
+
+.title-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.text1 {
+  font-family: 'MullerMedium', sans-serif;
+  line-height: 24px;
+  opacity: 0.5;
+}
+
+.text2 {
+  font-size: 30px;
+  line-height: 130%;
+}
+
+.text3 {
+  font-size: 20px;
+  line-height: 120%;
+}
+
+.text4 {
+  font-size: 22px;
+  line-height: 130%;
+}
+
+.link--tel {
+  color: $orange;
+  font-size: 50px;
+  font-family: 'MullerBold', sans-serif;
+}
+
+.link--email {
+  color: $white;
+  font-size: 30px;
+  font-family: 'MullerBold', sans-serif;
+}
+
+.link--contact {
+  color: rgba($color: $white, $alpha: 0.25);
+}

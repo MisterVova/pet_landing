@@ -1,0 +1,22 @@
+.team {
+  background-color: $beige;
+  padding-top: 125px;
+  padding-bottom: 173px;
+  &-title {
+    margin-bottom: 60px;
+    color: $black;
+  }
+  &-list {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  &-item {
+    padding: 6px 8px;
+    background-color: $white;
+    max-width: fit-content;
+  }
+  &-link {
+    color: $black;
+  }
+}
