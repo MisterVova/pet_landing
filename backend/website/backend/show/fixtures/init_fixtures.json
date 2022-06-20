@@ -1,0 +1,145 @@
+[
+{
+  "model": "show.template",
+  "pk": 1,
+  "fields": {
+    "destiny": "landing_test",
+    "title": "landing_test",
+    "description": "landing_test",
+    "template": "{% load static %}\r\n{% load show_template_tags%}\r\n{% autoescape off %}\r\n<!DOCTYPE html>\r\n<html lang=\"en\">\r\n<head>\r\n    <meta charset=\"UTF-8\">\r\n    {% render_template_by_kit kit_of_templates=kit_of_templates.styles kit_of_values=kit_of_values %}\r\n</head>\r\n<body>\r\n\r\n{% render_template_by_kit kit_of_templates=kit_of_templates.header kit_of_values=kit_of_values %}\r\n{% render_template_by_kit kit_of_templates=kit_of_templates.main kit_of_values=kit_of_values %}\r\n{% render_template_by_kit  kit_of_templates=kit_of_templates.footer kit_of_values=kit_of_values %}\r\n{% render_template_by_kit  kit_of_templates=kit_of_templates.scripts kit_of_values=kit_of_values %}\r\n</body>\r\n</html>\r\n\r\n{% endautoescape %}",
+    "slug": ""
+  }
+},
+{
+  "model": "show.template",
+  "pk": 2,
+  "fields": {
+    "destiny": "landing_test",
+    "title": "landing_test_styles",
+    "description": "landing_test_styles",
+    "template": "<meta charset=\"UTF-8\"/>\r\n    <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\"/>\r\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"/>\r\n   {% for link in kit_of_values.styles.links %}\r\n\r\n    <link rel=\"stylesheet\" href=\"media/{{link}}\"/>\r\n\r\n\r\n{% endfor %}\r\n    <title>{{kit_of_values.styles.title}}</title>",
+    "slug": "landing_test_styles"
+  }
+},
+{
+  "model": "show.template",
+  "pk": 3,
+  "fields": {
+    "destiny": "landing_test",
+    "title": "landing_test_header",
+    "description": "landing_test_header",
+    "template": "<header class=\"header\">\r\n    <div class=\"container\">\r\n        <div class=\"header__inner\">\r\n            <a href=\"#\" class=\"header__nav-logo-link\">\r\n                <img src=\"media/{{kit_of_values.header.imgs.garpix_logo_svg}}\" alt=\"{{kit_of_values.header.imgs.garpix_logo_svg_alt}}\" class=\"header__nav-logo-img\"/>\r\n            </a>\r\n            <nav class=\"header__nav\">\r\n                <ul class=\"header__nav-list\">\r\n                    <li class=\"header__nav-item text3\">\r\n                        <a href=\"#\" class=\"header__nav-item-link\">Кейсы</a>\r\n                    </li>\r\n                    <li class=\"header__nav-item text3\">\r\n                        <a href=\"#\" class=\"header__nav-item-link\">Услуги</a>\r\n                    </li>\r\n                    <li class=\"header__nav-item text3\"><a href=\"#\" class=\"header__nav-item-link\">Блог</a></li>\r\n                </ul>\r\n                <a href=\"{{kit_of_values.header.tel_href}}\" class=\"header__nav-item-link link-tel text3\">{{kit_of_values.header.tel_text}}</a>\r\n                <div class=\"header__burger burger\">\r\n                    <p class=\"burger__text\">Меню</p>\r\n                </div>\r\n            </nav>\r\n            <div class=\"burger__menu\">\r\n                <div class=\"container\">\r\n                    <div class=\"burger__menu__inner\">\r\n                        <div class=\"burger__menu__header\">\r\n                            <div class=\"burger__menu__header-btn burger\">\r\n                                <p class=\"burger__menu__header-btn-text\">Закрыть</p>\r\n                            </div>\r\n                        </div>\r\n                        <div class=\"burger__menu__content burger__content\">\r\n                            <div class=\"burger__content__left\">\r\n                                <img\r\n                                        src=\"media/{{kit_of_values.header.imgs.garpix_light_svg}}\"\r\n                                        alt=\"{{kit_of_values.header.imgs.garpix_logo_svg_alt}}\"\r\n                                        class=\"burger__content__left-garpixLogo\"\r\n                                />\r\n                                <button class=\"burger__content__left-btn\">{{kit_of_values.buttons.start_project.text}}</button>\r\n\r\n                                <ul class=\"left__contacts-list\">\r\n                                    <li class=\"left__contacts-item\">\r\n                                        <a href=\"{{kit_of_values.header.tel_href}}\" class=\"left__contacts-link-tel link--tel\"\r\n                                        >{{kit_of_values.header.tel_text}}</a\r\n                                        >\r\n                                    </li>\r\n                                    <li class=\"left__contacts-item\">\r\n                                        <a class=\"left__contacts-link-email link--email\" href=\"mailto:{{kit_of_values.header.contacts_email}}\"\r\n                                        >{{kit_of_values.header.contacts_email}}</a\r\n                                        >\r\n                                    </li>\r\n                                </ul>\r\n\r\n                                <ul class=\"left__contacts-list-social\">\r\n                                    <li class=\"left__contacts-item-social\">\r\n                                        <a href=\"#\" class=\"left__contacts-link link--contact\">Vkontakte</a>\r\n                                    </li>\r\n                                    <li class=\"left__contacts-item-social\">\r\n                                        <a href=\"#\" class=\"left__contacts-link link--contact\">Behance</a>\r\n                                    </li>\r\n                                    <li class=\"left__contacts-item-social\">\r\n                                        <a href=\"#\" class=\"left__contacts-link link--contact\">Youtube</a>\r\n                                    </li>\r\n                                    <li class=\"left__contacts-item-social\">\r\n                                        <a href=\"#\" class=\"left__contacts-link link--contact\">Telegram</a>\r\n                                    </li>\r\n                                    <li class=\"left__contacts-item-social\">\r\n                                        <a href=\"#\" class=\"left__contacts-link link--contact\">Zen</a>\r\n                                    </li>\r\n                                </ul>\r\n                            </div>\r\n                            <div class=\"burger__content__main\">\r\n                                <ul class=\"burger__content__main-list\">\r\n                                    <li class=\"burger__content__main-item\">\r\n                                        <a\r\n                                                href=\"#\"\r\n                                                class=\"burger__content__main-link burger__content__main-link--active\"\r\n                                        >Главная</a\r\n                                        >\r\n                                    </li>\r\n                                    <li class=\"burger__content__main-item\">\r\n                                        <a href=\"#\" class=\"burger__content__main-link\">Кейсы</a>\r\n                                    </li>\r\n                                    <li class=\"burger__content__main-item\">\r\n                                        Услуги\r\n\r\n                                        <ul class=\"burger__content__main__services-list\">\r\n                                            <li class=\"burger__content__main__services-item\">\r\n                                                <a href=\"#\" class=\"burger__content__main__services-link\">Веб-разработка</a>\r\n                                            </li>\r\n                                            <li class=\"burger__content__main__services-item\">\r\n                                                <a href=\"#\" class=\"burger__content__main__services-link\"\r\n                                                >Мобильные приложения</a\r\n                                                >\r\n                                            </li>\r\n                                            <li class=\"burger__content__main__services-item\">\r\n                                                <a href=\"#\" class=\"burger__content__main__services-link\"\r\n                                                >Поддержка и маркетинг</a\r\n                                                >\r\n                                            </li>\r\n                                            <li class=\"burger__content__main__services-item\">\r\n                                                <a href=\"#\" class=\"burger__content__main__services-link\">Аутстафф</a>\r\n                                            </li>\r\n                                        </ul>\r\n                                    </li>\r\n                                    <li class=\"burger__content__main-item\">\r\n                                        <a href=\"#\" class=\"burger__content__main-link\">Карьера</a>\r\n                                    </li>\r\n                                    <li class=\"burger__content__main-item\">\r\n                                        <a href=\"#\" class=\"burger__content__main-link\">Партнерская программа</a>\r\n                                    </li>\r\n                                    <li class=\"burger__content__main-item\">\r\n                                        <a href=\"#\" class=\"burger__content__main-link\">Цифровая академия</a>\r\n                                    </li>\r\n                                    <li class=\"burger__content__main-item\">\r\n                                        <a href=\"#\" class=\"burger__content__main-link\">Блог</a>\r\n                                    </li>\r\n                                </ul>\r\n                            </div>\r\n                        </div>\r\n                    </div>\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</header>",
+    "slug": "landing_test_header"
+  }
+},
+{
+  "model": "show.template",
+  "pk": 4,
+  "fields": {
+    "destiny": "landing_test",
+    "title": "landing_test_main",
+    "description": "landing_test_main",
+    "template": "{% load show_template_tags%}\r\n{% autoescape off %}\r\n<main class=\"main\">\r\n{% for item in kit_of_templates.lst %}\r\n<div>\r\n{% render_template_by_kit kit_of_templates=item kit_of_values=kit_of_values %}\r\n</div>\r\n{% endfor %}\r\n \r\n</main>\r\n{% endautoescape %}",
+    "slug": "landing_test_main"
+  }
+},
+{
+  "model": "show.template",
+  "pk": 5,
+  "fields": {
+    "destiny": "landing_test",
+    "title": "landing_test_footer",
+    "description": "landing_test_footer",
+    "template": "<footer class=\"footer\">\r\n    <h2 class=\"title title-hidden\">Футер</h2>\r\n    <div class=\"container\">\r\n        <div class=\"footer__inner\">\r\n            <div class=\"footer__wrap-information\">\r\n                <div class=\"footer__contact\">\r\n                    <h3 class=\"footer__contact-title title3\">Контакты</h3>\r\n                    <a href=\"tel:8 (800) 234-50-56\" class=\"footer__contact-link--tel link--tel\"\r\n                    >8 800 234-50-56</a\r\n                    >\r\n                    <a class=\"footer__contact-link--email link--email\" href=\"mailto:inbox@garpix.com\"\r\n                    >inbox@garpix.com</a\r\n                    >\r\n                </div>\r\n                <div class=\"footer__project\">\r\n                    <h3 class=\"footer__project-title title3\">Начните проект прямо сейчас</h3>\r\n                    <button class=\"burger__content__left-btn project-btn\">Оставить заявку</button>\r\n                </div>\r\n            </div>\r\n            <div class=\"footer__sities\">\r\n                <ul class=\"footer__sities-list\">\r\n                    <li class=\"footer__sities-item\">\r\n                        <p class=\"footer__sities-sity text2\">Москва</p>\r\n                        <p class=\"footer__sities-address\">Мосфильмовская 74 б, 21й этаж, офис 243</p>\r\n                    </li>\r\n                    <li class=\"footer__sities-item\">\r\n                        <p class=\"footer__sities-sity text2\">Иваново</p>\r\n                        <p class=\"footer__sities-address\">ул. 8 марта, 32, корпус б, 4 уровень</p>\r\n                    </li>\r\n                    <li class=\"footer__sities-item\">\r\n                        <p class=\"footer__sities-sity text2\">Санкт-Петербург</p>\r\n                        <p class=\"footer__sities-address\">наб. канала Грибоедова, 6/2, 3й этаж, офис 120</p>\r\n                    </li>\r\n                </ul>\r\n            </div>\r\n            <div class=\"footer__social\">\r\n                <ul class=\"footer__social-list\">\r\n                    <li class=\"footer__social-item\">\r\n                        <a href=\"#\" class=\"footer__social-link link--contact\">Vkontakte</a>\r\n                    </li>\r\n                    <li class=\"footer__social-item\">\r\n                        <a href=\"#\" class=\"footer__social-link link--contact\">Behance</a>\r\n                    </li>\r\n                    <li class=\"footer__social-item\">\r\n                        <a href=\"#\" class=\"footer__social-link link--contact\">Youtube</a>\r\n                    </li>\r\n                    <li class=\"footer__social-item\">\r\n                        <a href=\"#\" class=\"footer__social-link link--contact\">Telegram</a>\r\n                    </li>\r\n                    <li class=\"footer__social-item\">\r\n                        <a href=\"#\" class=\"footer__social-link link--contact\">Zen</a>\r\n                    </li>\r\n                </ul>\r\n            </div>\r\n        </div>\r\n    </div>\r\n    <div class=\"footer-bottom\">\r\n        <div class=\"container\">\r\n            <div class=\"footer-bottom__inner\">\r\n                <p class=\"footer-bottom__text text1\">2022 © GARPIX</p>\r\n                <a href=\"#\" class=\"footer-bottom__rule text1\">Политика конфиденциальности</a>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</footer>",
+    "slug": "landing_test_footer"
+  }
+},
+{
+  "model": "show.template",
+  "pk": 6,
+  "fields": {
+    "destiny": "landing_test",
+    "title": "landing_test_scripts",
+    "description": "landing_test_scripts",
+    "template": "{% for script in kit_of_values.script.scripts %}\r\n<script src=\"media/{{script}}\"></script>\r\n{% endfor %}",
+    "slug": "landing_test_scripts"
+  }
+},
+{
+  "model": "show.template",
+  "pk": 7,
+  "fields": {
+    "destiny": "landing_test",
+    "title": "landing_test_main_banner",
+    "description": "landing_test_main_banner",
+    "template": "<section class=\"main-banner\">\r\n        <div class=\"main-banner__inner\">\r\n            <div class=\"container\">\r\n                <div class=\"main-banner__nav\">\r\n                    <div class=\"main-banner__nav-breadCrumbs breadCrumbs\">\r\n                        <ul class=\"breadCrumbs-list\">\r\n                            <li class=\"breadCrumbs-item\"><a href=\"#\" class=\"breadCrumbs-link\">Главная</a></li>\r\n                            <li class=\"breadCrumbs-item\"><a href=\"#\" class=\"breadCrumbs-link\">Кейсы</a></li>\r\n                            <li class=\"breadCrumbs-item\">\r\n                                <a href=\"#\" class=\"breadCrumbs-link\">Описание кейса</a>\r\n                            </li>\r\n                        </ul>\r\n                        <div class=\"main-banner__tags tags\">\r\n                            <ul class=\"tags-list\">\r\n{% for item in kit_of_values.banner.tags_list %}\r\n\r\n    <li class=\"tags-item\"><a href=\"media/{{item.href}}\" class=\"tags-link\">{{item.text}}</a></li>\r\n\r\n{% endfor %}\r\n\r\n                            </ul>\r\n                        </div>\r\n                    </div>\r\n                </div>\r\n                <h1 class=\"main-banner__title title1\">{{kit_of_values.banner.title}}</h1>\r\n                <div class=\"main-banner__preview\">\r\n                    <img\r\n                            class=\"main-banner__preview-img\"\r\n                            src=\"media/{{kit_of_values.banner.imgs.main.stc}}\"\r\n                            alt=\"{{kit_of_values.banner.imgs.main.alt}}\"\r\n                    />\r\n                </div>\r\n            </div>\r\n        </div>\r\n        <div class=\"main-banner__about\">\r\n            <div class=\"container\">\r\n                <div class=\"main-banner__about__inner\">\r\n                    <img\r\n                            src=\"media/{{kit_of_values.banner.imgs.logo.stc}}\"\r\n                            alt=\"{{kit_of_values.banner.imgs.logo.alt}}\"\r\n                            class=\"main-banner__about-logo\"\r\n                    />\r\n                    <p class=\"main-banner__about-text\">\r\n{{kit_of_values.banner.about}}\r\n                    </p>\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </section>",
+    "slug": "landing_test_main_banner"
+  }
+},
+{
+  "model": "show.template",
+  "pk": 8,
+  "fields": {
+    "destiny": "landing_test",
+    "title": "landing_test_main_problems",
+    "description": "landing_test_main_problems",
+    "template": "{% load show_template_tags%}\r\n{% autoescape off %}\r\n<section class=\"problems\">\r\n<h2 class=\"title title-hidden\">Цели и проблемы</h2>\r\n<div class=\"container\">\r\n<ul class=\"problems__slider slider\">\r\n{% for item in kit_of_templates.lst %}\r\n\r\n<li class=\"slider-item\">\r\n{% render_template_by_kit kit_of_templates=item kit_of_values=kit_of_values %}\r\n</li>\r\n\r\n{% endfor %}\r\n </ul>\r\n</div> \r\n</section>\r\n{% endautoescape %}",
+    "slug": "landing_test_main_problems"
+  }
+},
+{
+  "model": "show.template",
+  "pk": 9,
+  "fields": {
+    "destiny": "landing_test",
+    "title": "landing_test_main_team",
+    "description": "landing_test_main_team",
+    "template": "<section class=\"team\">\r\n        <div class=\"team__inner\">\r\n            <div class=\"container\">\r\n                <h2 class=\"team-title title2\">{{kit_of_values.team.dct.title}}</h2>\r\n                <ul class=\"team-list\">\r\n\r\n{% for item in kit_of_values.team.lst %}\r\n\r\n<li class=\"team-item\"><a href=\"{{item.href}}\" class=\"team-link text2\">{{item.text}}</a></li>\r\n\r\n{% endfor %}\r\n\r\n                </ul>\r\n            </div>\r\n        </div>\r\n    </section>",
+    "slug": "landing_test_main_team"
+  }
+},
+{
+  "model": "show.template",
+  "pk": 10,
+  "fields": {
+    "destiny": "landing_test",
+    "title": "landing_test_main_s4",
+    "description": "landing_test_main_s4",
+    "template": "landing_test_main_s4",
+    "slug": "landing_test_main_s4"
+  }
+},
+{
+  "model": "show.template",
+  "pk": 11,
+  "fields": {
+    "destiny": "landing_test",
+    "title": "landing_test_main_problems_item1",
+    "description": "landing_test_main_problems_item1",
+    "template": "<div class=\"slider-item-data\">\r\n                        <h2 class=\"slider-title title2\">{{kit_of_values.problems.item_1.title}}</h2>\r\n                        <ul class=\"slider__problem-list\">\r\n\r\n{% for item in kit_of_values.problems.item_1.texts %}\r\n                            <li class=\"slider__problem-item\">\r\n                                <p class=\"slider__problem-text text4\">\r\n                                   {{item}}\r\n                                </p>\r\n                            </li>\r\n  \r\n{% endfor %}\r\n\r\n                        </ul>\r\n                    </div>\r\n                    <img\r\n                            src=\"media/{{kit_of_values.problems.img.src}}\"\r\n                            alt=\"{{kit_of_values.problems.img.alt}}\"\r\n                            class=\"slider-img\"\r\n                    />",
+    "slug": "landing_test_main_problems_item1"
+  }
+},
+{
+  "model": "show.template",
+  "pk": 12,
+  "fields": {
+    "destiny": "landing_test",
+    "title": "landing_test_main_problems_item2",
+    "description": "landing_test_main_problems_item2",
+    "template": "<div class=\"slider-item-data\">\r\n                        <h2 class=\"slider-title title2\">\r\n{{kit_of_values.problems.item_2.title}}\r\n                       </h2>\r\n                        \r\n                        <p class=\"slider-text text4\">\r\n{{kit_of_values.problems.item_2.text}}\r\n                        </p>\r\n\r\n\r\n\r\n                        <ul class=\"slider__problem-list\">\r\n{% for item in kit_of_values.problems.item_2.texts %}\r\n                            <li class=\"slider__problem-item\">\r\n                                <p class=\"slider__problem-text text4\">\r\n{{item}}\r\n                                </p>\r\n                            </li>\r\n{% endfor %}      \r\n                        </ul>\r\n                    </div>",
+    "slug": "landing_test_main_problems_item2"
+  }
+},
+{
+  "model": "show.template",
+  "pk": 13,
+  "fields": {
+    "destiny": "landing_test",
+    "title": "landing_test_main_s2_i3",
+    "description": "landing_test_main_s2_i3",
+    "template": "<div class=\"slider-item-data\">\r\n<h2 class=\"slider-title title2\">Пока Пусто </h2>\r\n<p class=\"slider-text text4\">\r\nНо мы Обязательно, что нибудь добавим\r\n</p>\r\n</div>",
+    "slug": "landing_test_main_s2_i3"
+  }
+}
+]

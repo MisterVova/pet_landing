@@ -1,0 +1,1133 @@
+[
+{
+  "model": "kit_of_values.group",
+  "pk": 1,
+  "fields": {
+    "name": "Landing_test_values"
+  }
+},
+{
+  "model": "kit_of_values.group",
+  "pk": 2,
+  "fields": {
+    "name": "Landing_test_template"
+  }
+},
+{
+  "model": "kit_of_values.value",
+  "pk": 1,
+  "fields": {
+    "name": "title",
+    "group": 1,
+    "key": "styles.title",
+    "type": "Text"
+  }
+},
+{
+  "model": "kit_of_values.value",
+  "pk": 2,
+  "fields": {
+    "name": "img/garpix-logo.svg alt",
+    "group": 1,
+    "key": "header.imgs.garpix_logo_svg_alt",
+    "type": "Text"
+  }
+},
+{
+  "model": "kit_of_values.value",
+  "pk": 3,
+  "fields": {
+    "name": "button",
+    "group": 1,
+    "key": "buttons.start_project.text",
+    "type": "Text"
+  }
+},
+{
+  "model": "kit_of_values.value",
+  "pk": 4,
+  "fields": {
+    "name": "header tel text",
+    "group": 1,
+    "key": "header.tel_text",
+    "type": "Text"
+  }
+},
+{
+  "model": "kit_of_values.value",
+  "pk": 5,
+  "fields": {
+    "name": "header tel href",
+    "group": 1,
+    "key": "header.tel_href",
+    "type": "Text"
+  }
+},
+{
+  "model": "kit_of_values.value",
+  "pk": 6,
+  "fields": {
+    "name": "temp_slag_01",
+    "group": 2,
+    "key": "s1.0.temp_slag_01",
+    "type": "Text"
+  }
+},
+{
+  "model": "kit_of_values.value",
+  "pk": 7,
+  "fields": {
+    "name": "temp_slag_02",
+    "group": 2,
+    "key": "s1.1.temp_slag_02",
+    "type": "Text"
+  }
+},
+{
+  "model": "kit_of_values.value",
+  "pk": 8,
+  "fields": {
+    "name": "temp_slag_03",
+    "group": 2,
+    "key": "s2.0.temp_slag_03",
+    "type": "Text"
+  }
+},
+{
+  "model": "kit_of_values.value",
+  "pk": 9,
+  "fields": {
+    "name": "landing_test_footer",
+    "group": 2,
+    "key": "footer.slug",
+    "type": "Text"
+  }
+},
+{
+  "model": "kit_of_values.value",
+  "pk": 10,
+  "fields": {
+    "name": "landing_test_header",
+    "group": 2,
+    "key": "header.slug",
+    "type": "Text"
+  }
+},
+{
+  "model": "kit_of_values.value",
+  "pk": 11,
+  "fields": {
+    "name": "landing_test_main",
+    "group": 2,
+    "key": "main.slug",
+    "type": "Text"
+  }
+},
+{
+  "model": "kit_of_values.value",
+  "pk": 12,
+  "fields": {
+    "name": "landing_test_scripts",
+    "group": 2,
+    "key": "scripts.slug",
+    "type": "Text"
+  }
+},
+{
+  "model": "kit_of_values.value",
+  "pk": 13,
+  "fields": {
+    "name": "landing_test_styles",
+    "group": 2,
+    "key": "styles.slug",
+    "type": "Text"
+  }
+},
+{
+  "model": "kit_of_values.value",
+  "pk": 14,
+  "fields": {
+    "name": "landing_test_main_s1",
+    "group": 2,
+    "key": "main.1.slug",
+    "type": "Slug"
+  }
+},
+{
+  "model": "kit_of_values.value",
+  "pk": 15,
+  "fields": {
+    "name": "landing_test_main_s2",
+    "group": 2,
+    "key": "main.2.slug",
+    "type": "Slug"
+  }
+},
+{
+  "model": "kit_of_values.value",
+  "pk": 16,
+  "fields": {
+    "name": "landing_test_main_s2_i1",
+    "group": 2,
+    "key": "main.2.1.slug",
+    "type": "Slug"
+  }
+},
+{
+  "model": "kit_of_values.value",
+  "pk": 17,
+  "fields": {
+    "name": "landing_test_main_s2_i3",
+    "group": 2,
+    "key": "main.2.3.slug",
+    "type": "Slug"
+  }
+},
+{
+  "model": "kit_of_values.value",
+  "pk": 18,
+  "fields": {
+    "name": "landing_test_main_s2_i2",
+    "group": 2,
+    "key": "main.2.2.slug",
+    "type": "Slug"
+  }
+},
+{
+  "model": "kit_of_values.value",
+  "pk": 19,
+  "fields": {
+    "name": "landing_test_main_s3",
+    "group": 2,
+    "key": "main.3.slug",
+    "type": "Slug"
+  }
+},
+{
+  "model": "kit_of_values.value",
+  "pk": 20,
+  "fields": {
+    "name": "landing_test_main_s4",
+    "group": 2,
+    "key": "main.4.slug",
+    "type": "Slug"
+  }
+},
+{
+  "model": "kit_of_values.value",
+  "pk": 21,
+  "fields": {
+    "name": "css/style.min.css",
+    "group": 1,
+    "key": "styles.links.0",
+    "type": "File"
+  }
+},
+{
+  "model": "kit_of_values.value",
+  "pk": 22,
+  "fields": {
+    "name": "css/style.min.css",
+    "group": 1,
+    "key": "styles.links.1",
+    "type": "File"
+  }
+},
+{
+  "model": "kit_of_values.value",
+  "pk": 23,
+  "fields": {
+    "name": "js/app.min.js",
+    "group": 1,
+    "key": "script.scripts.0",
+    "type": "File"
+  }
+},
+{
+  "model": "kit_of_values.value",
+  "pk": 24,
+  "fields": {
+    "name": "img/garpix-logo.svg",
+    "group": 1,
+    "key": "header.imgs.garpix_logo_svg",
+    "type": "File"
+  }
+},
+{
+  "model": "kit_of_values.value",
+  "pk": 25,
+  "fields": {
+    "name": "img/garpix-light.svg",
+    "group": 1,
+    "key": "header.imgs.garpix_light_svg",
+    "type": "File"
+  }
+},
+{
+  "model": "kit_of_values.value",
+  "pk": 26,
+  "fields": {
+    "name": "contacts-email",
+    "group": 1,
+    "key": "header.contacts_email",
+    "type": "Text"
+  }
+},
+{
+  "model": "kit_of_values.value",
+  "pk": 27,
+  "fields": {
+    "name": "team.0.text",
+    "group": 1,
+    "key": "team.0.text",
+    "type": "Text"
+  }
+},
+{
+  "model": "kit_of_values.value",
+  "pk": 28,
+  "fields": {
+    "name": "team.0.href",
+    "group": 1,
+    "key": "team.0.href",
+    "type": "Text"
+  }
+},
+{
+  "model": "kit_of_values.value",
+  "pk": 29,
+  "fields": {
+    "name": "team.1.text",
+    "group": 1,
+    "key": "team.1.text",
+    "type": "Text"
+  }
+},
+{
+  "model": "kit_of_values.value",
+  "pk": 30,
+  "fields": {
+    "name": "team.2.text",
+    "group": 1,
+    "key": "team.2.text",
+    "type": "Text"
+  }
+},
+{
+  "model": "kit_of_values.value",
+  "pk": 31,
+  "fields": {
+    "name": "team.3.text",
+    "group": 1,
+    "key": "team.3.text",
+    "type": "Text"
+  }
+},
+{
+  "model": "kit_of_values.value",
+  "pk": 32,
+  "fields": {
+    "name": "team.4.text",
+    "group": 1,
+    "key": "team.4.text",
+    "type": "Text"
+  }
+},
+{
+  "model": "kit_of_values.value",
+  "pk": 33,
+  "fields": {
+    "name": "team.6.text",
+    "group": 1,
+    "key": "team.5.text",
+    "type": "Text"
+  }
+},
+{
+  "model": "kit_of_values.value",
+  "pk": 34,
+  "fields": {
+    "name": "team.6.text",
+    "group": 1,
+    "key": "team.6.text",
+    "type": "Text"
+  }
+},
+{
+  "model": "kit_of_values.value",
+  "pk": 35,
+  "fields": {
+    "name": "team.1.href",
+    "group": 1,
+    "key": "team.1.href",
+    "type": "Text"
+  }
+},
+{
+  "model": "kit_of_values.value",
+  "pk": 36,
+  "fields": {
+    "name": "team.2.href",
+    "group": 1,
+    "key": "team.2.href",
+    "type": "Text"
+  }
+},
+{
+  "model": "kit_of_values.value",
+  "pk": 37,
+  "fields": {
+    "name": "team.3.href",
+    "group": 1,
+    "key": "team.3.href",
+    "type": "Text"
+  }
+},
+{
+  "model": "kit_of_values.value",
+  "pk": 38,
+  "fields": {
+    "name": "team.4.href",
+    "group": 1,
+    "key": "team.4.href",
+    "type": "Text"
+  }
+},
+{
+  "model": "kit_of_values.value",
+  "pk": 39,
+  "fields": {
+    "name": "team.5.href",
+    "group": 1,
+    "key": "team.5.href",
+    "type": "Text"
+  }
+},
+{
+  "model": "kit_of_values.value",
+  "pk": 40,
+  "fields": {
+    "name": "team.6.href",
+    "group": 1,
+    "key": "team.6.href",
+    "type": "Text"
+  }
+},
+{
+  "model": "kit_of_values.value",
+  "pk": 41,
+  "fields": {
+    "name": "team.title",
+    "group": 1,
+    "key": "team.title",
+    "type": "Text"
+  }
+},
+{
+  "model": "kit_of_values.value",
+  "pk": 42,
+  "fields": {
+    "name": "banner.tags_list.0.text",
+    "group": 1,
+    "key": "banner.tags_list.1.text",
+    "type": "Text"
+  }
+},
+{
+  "model": "kit_of_values.value",
+  "pk": 43,
+  "fields": {
+    "name": "banner.tags_list.1.text",
+    "group": 1,
+    "key": "banner.tags_list.2.text",
+    "type": "Text"
+  }
+},
+{
+  "model": "kit_of_values.value",
+  "pk": 44,
+  "fields": {
+    "name": "banner.title",
+    "group": 1,
+    "key": "banner.title",
+    "type": "Text"
+  }
+},
+{
+  "model": "kit_of_values.value",
+  "pk": 45,
+  "fields": {
+    "name": "banner.img.alt",
+    "group": 1,
+    "key": "banner.imgs.main.alt",
+    "type": "Text"
+  }
+},
+{
+  "model": "kit_of_values.value",
+  "pk": 46,
+  "fields": {
+    "name": "banner.img.main.stc",
+    "group": 1,
+    "key": "banner.imgs.main.stc",
+    "type": "File"
+  }
+},
+{
+  "model": "kit_of_values.value",
+  "pk": 47,
+  "fields": {
+    "name": "banner.img.logo.alt",
+    "group": 1,
+    "key": "banner.imgs.logo.alt",
+    "type": "Text"
+  }
+},
+{
+  "model": "kit_of_values.value",
+  "pk": 48,
+  "fields": {
+    "name": "banner.about",
+    "group": 1,
+    "key": "banner.about",
+    "type": "Text"
+  }
+},
+{
+  "model": "kit_of_values.value",
+  "pk": 49,
+  "fields": {
+    "name": "banner.img.logo.stc",
+    "group": 1,
+    "key": "banner.imgs.logo.stc",
+    "type": "File"
+  }
+},
+{
+  "model": "kit_of_values.value",
+  "pk": 50,
+  "fields": {
+    "name": "banner.tags_list.0.href",
+    "group": 1,
+    "key": "banner.tags_list.1.href",
+    "type": "Text"
+  }
+},
+{
+  "model": "kit_of_values.value",
+  "pk": 51,
+  "fields": {
+    "name": "banner.tags_list.0.href",
+    "group": 1,
+    "key": "banner.tags_list.2.href",
+    "type": "Text"
+  }
+},
+{
+  "model": "kit_of_values.value",
+  "pk": 52,
+  "fields": {
+    "name": "problems.item_1.title",
+    "group": 1,
+    "key": "problems.item_2.title",
+    "type": "Text"
+  }
+},
+{
+  "model": "kit_of_values.value",
+  "pk": 53,
+  "fields": {
+    "name": "problems_item1.img.alt",
+    "group": 1,
+    "key": "problems.img.alt",
+    "type": "Text"
+  }
+},
+{
+  "model": "kit_of_values.value",
+  "pk": 54,
+  "fields": {
+    "name": "problems.item_1.title",
+    "group": 1,
+    "key": "problems.item_1.title",
+    "type": "Text"
+  }
+},
+{
+  "model": "kit_of_values.value",
+  "pk": 55,
+  "fields": {
+    "name": "problems.item_1.texts.1",
+    "group": 1,
+    "key": "problems.item_1.texts.1",
+    "type": "Text"
+  }
+},
+{
+  "model": "kit_of_values.value",
+  "pk": 56,
+  "fields": {
+    "name": "problems.item_1.texts.2",
+    "group": 1,
+    "key": "problems.item_1.texts.2",
+    "type": "Text"
+  }
+},
+{
+  "model": "kit_of_values.value",
+  "pk": 57,
+  "fields": {
+    "name": "problems.img.src",
+    "group": 1,
+    "key": "problems.img.src",
+    "type": "Image"
+  }
+},
+{
+  "model": "kit_of_values.value",
+  "pk": 58,
+  "fields": {
+    "name": "problems.item_2.texts.1",
+    "group": 1,
+    "key": "problems.item_2.texts.1",
+    "type": "Text"
+  }
+},
+{
+  "model": "kit_of_values.value",
+  "pk": 59,
+  "fields": {
+    "name": "problems.item_2.texts.2",
+    "group": 1,
+    "key": "problems.item_2.texts.2",
+    "type": "Text"
+  }
+},
+{
+  "model": "kit_of_values.value",
+  "pk": 60,
+  "fields": {
+    "name": "problems.item_2.texts.3",
+    "group": 1,
+    "key": "problems.item_2.texts.3",
+    "type": "Text"
+  }
+},
+{
+  "model": "kit_of_values.value",
+  "pk": 61,
+  "fields": {
+    "name": "problems.item_2.text",
+    "group": 1,
+    "key": "problems.item_2.text",
+    "type": "Text"
+  }
+},
+{
+  "model": "kit_of_values.imagevalue",
+  "pk": 57,
+  "fields": {
+    "value": "uploads/2022/6/about-company.png"
+  }
+},
+{
+  "model": "kit_of_values.filevalue",
+  "pk": 49,
+  "fields": {
+    "value": "uploads/2022/6/logo.svg"
+  }
+},
+{
+  "model": "kit_of_values.filevalue",
+  "pk": 46,
+  "fields": {
+    "value": "uploads/2022/6/port.png"
+  }
+},
+{
+  "model": "kit_of_values.filevalue",
+  "pk": 25,
+  "fields": {
+    "value": "uploads/2022/6/garpix-light_xXxWYSO.svg"
+  }
+},
+{
+  "model": "kit_of_values.filevalue",
+  "pk": 24,
+  "fields": {
+    "value": "uploads/2022/6/garpix-logo.svg"
+  }
+},
+{
+  "model": "kit_of_values.filevalue",
+  "pk": 23,
+  "fields": {
+    "value": "uploads/2022/6/app-min.js"
+  }
+},
+{
+  "model": "kit_of_values.filevalue",
+  "pk": 22,
+  "fields": {
+    "value": "uploads/2022/6/style.css"
+  }
+},
+{
+  "model": "kit_of_values.filevalue",
+  "pk": 21,
+  "fields": {
+    "value": "uploads/2022/6/style-min.css"
+  }
+},
+{
+  "model": "kit_of_values.textvalue",
+  "pk": 61,
+  "fields": {
+    "value": "Глубокий анализ пользовательского поведения на сайте и основных его метрик выявил ряд проблем старой версии сайта:"
+  }
+},
+{
+  "model": "kit_of_values.textvalue",
+  "pk": 60,
+  "fields": {
+    "value": "не оцифрованные бизнес-процессы занимали от 3 до 7 рабочих дней, что существенно тормозило деятельность компании."
+  }
+},
+{
+  "model": "kit_of_values.textvalue",
+  "pk": 59,
+  "fields": {
+    "value": "отсутствие отдельных страниц под услуги снижает эффективность интернет-рекламы"
+  }
+},
+{
+  "model": "kit_of_values.textvalue",
+  "pk": 58,
+  "fields": {
+    "value": "слишком сложная структура, пользователь не может найти необходимые услуги и покидает сайт"
+  }
+},
+{
+  "model": "kit_of_values.textvalue",
+  "pk": 56,
+  "fields": {
+    "value": "обеспечить интеграцию с сервисами Федеральной таможенной службы"
+  }
+},
+{
+  "model": "kit_of_values.textvalue",
+  "pk": 55,
+  "fields": {
+    "value": "создать современный, удобный сайт взамен устаревшей версии"
+  }
+},
+{
+  "model": "kit_of_values.textvalue",
+  "pk": 54,
+  "fields": {
+    "value": "Что предстояло сделать"
+  }
+},
+{
+  "model": "kit_of_values.textvalue",
+  "pk": 53,
+  "fields": {
+    "value": "Скриншот страницы о истории порта"
+  }
+},
+{
+  "model": "kit_of_values.textvalue",
+  "pk": 52,
+  "fields": {
+    "value": "Проблемы устаревшей версии сайта"
+  }
+},
+{
+  "model": "kit_of_values.textvalue",
+  "pk": 51,
+  "fields": {
+    "value": "tag/1/"
+  }
+},
+{
+  "model": "kit_of_values.textvalue",
+  "pk": 50,
+  "fields": {
+    "value": "tag/1/"
+  }
+},
+{
+  "model": "kit_of_values.textvalue",
+  "pk": 48,
+  "fields": {
+    "value": "Владивостокский морской торговый порт (ВМТП) входит в Транспортную группу FESCO — одну из крупнейших частных транспортно-логистических компаний России с активами в сфере портового, железнодорожного и интегрированного логистического бизнеса."
+  }
+},
+{
+  "model": "kit_of_values.textvalue",
+  "pk": 47,
+  "fields": {
+    "value": "Логотип сайт владивостокского морского торгового порта"
+  }
+},
+{
+  "model": "kit_of_values.textvalue",
+  "pk": 45,
+  "fields": {
+    "value": "Картинка сайта владивостокского морского торгового порта"
+  }
+},
+{
+  "model": "kit_of_values.textvalue",
+  "pk": 44,
+  "fields": {
+    "value": "Сайт владивостокского морского торгового порта"
+  }
+},
+{
+  "model": "kit_of_values.textvalue",
+  "pk": 43,
+  "fields": {
+    "value": "Промышленность"
+  }
+},
+{
+  "model": "kit_of_values.textvalue",
+  "pk": 42,
+  "fields": {
+    "value": "Корпоративный сайт"
+  }
+},
+{
+  "model": "kit_of_values.textvalue",
+  "pk": 41,
+  "fields": {
+    "value": "Команда проекта"
+  }
+},
+{
+  "model": "kit_of_values.textvalue",
+  "pk": 40,
+  "fields": {
+    "value": "team/6/"
+  }
+},
+{
+  "model": "kit_of_values.textvalue",
+  "pk": 39,
+  "fields": {
+    "value": "team/5/"
+  }
+},
+{
+  "model": "kit_of_values.textvalue",
+  "pk": 38,
+  "fields": {
+    "value": "team/4/"
+  }
+},
+{
+  "model": "kit_of_values.textvalue",
+  "pk": 37,
+  "fields": {
+    "value": "team/3/"
+  }
+},
+{
+  "model": "kit_of_values.textvalue",
+  "pk": 36,
+  "fields": {
+    "value": "team/2/"
+  }
+},
+{
+  "model": "kit_of_values.textvalue",
+  "pk": 35,
+  "fields": {
+    "value": "team/1/"
+  }
+},
+{
+  "model": "kit_of_values.textvalue",
+  "pk": 34,
+  "fields": {
+    "value": "QA-инженер"
+  }
+},
+{
+  "model": "kit_of_values.textvalue",
+  "pk": 33,
+  "fields": {
+    "value": "Бизнес аналитик"
+  }
+},
+{
+  "model": "kit_of_values.textvalue",
+  "pk": 32,
+  "fields": {
+    "value": "Системный администратор"
+  }
+},
+{
+  "model": "kit_of_values.textvalue",
+  "pk": 31,
+  "fields": {
+    "value": "Web-дизайнер"
+  }
+},
+{
+  "model": "kit_of_values.textvalue",
+  "pk": 30,
+  "fields": {
+    "value": "Front-end разработчик"
+  }
+},
+{
+  "model": "kit_of_values.textvalue",
+  "pk": 29,
+  "fields": {
+    "value": "Back-end разработчик"
+  }
+},
+{
+  "model": "kit_of_values.textvalue",
+  "pk": 28,
+  "fields": {
+    "value": "#"
+  }
+},
+{
+  "model": "kit_of_values.textvalue",
+  "pk": 27,
+  "fields": {
+    "value": "Менеджер проекта"
+  }
+},
+{
+  "model": "kit_of_values.textvalue",
+  "pk": 26,
+  "fields": {
+    "value": "inbox@garpix.com"
+  }
+},
+{
+  "model": "kit_of_values.textvalue",
+  "pk": 13,
+  "fields": {
+    "value": "landing_test_styles"
+  }
+},
+{
+  "model": "kit_of_values.textvalue",
+  "pk": 12,
+  "fields": {
+    "value": "landing_test_scripts"
+  }
+},
+{
+  "model": "kit_of_values.textvalue",
+  "pk": 11,
+  "fields": {
+    "value": "landing_test_main"
+  }
+},
+{
+  "model": "kit_of_values.textvalue",
+  "pk": 10,
+  "fields": {
+    "value": "landing_test_header"
+  }
+},
+{
+  "model": "kit_of_values.textvalue",
+  "pk": 9,
+  "fields": {
+    "value": "landing_test_footer"
+  }
+},
+{
+  "model": "kit_of_values.textvalue",
+  "pk": 8,
+  "fields": {
+    "value": "temp_slag_03"
+  }
+},
+{
+  "model": "kit_of_values.textvalue",
+  "pk": 7,
+  "fields": {
+    "value": "temp_slag_02"
+  }
+},
+{
+  "model": "kit_of_values.textvalue",
+  "pk": 6,
+  "fields": {
+    "value": "temp_slag_01"
+  }
+},
+{
+  "model": "kit_of_values.textvalue",
+  "pk": 5,
+  "fields": {
+    "value": "tel:8 (800) 234-50-56"
+  }
+},
+{
+  "model": "kit_of_values.textvalue",
+  "pk": 4,
+  "fields": {
+    "value": "8 800 234-50-56"
+  }
+},
+{
+  "model": "kit_of_values.textvalue",
+  "pk": 3,
+  "fields": {
+    "value": "Начать проект"
+  }
+},
+{
+  "model": "kit_of_values.textvalue",
+  "pk": 2,
+  "fields": {
+    "value": "Логотип Garpix !!"
+  }
+},
+{
+  "model": "kit_of_values.textvalue",
+  "pk": 1,
+  "fields": {
+    "value": "Морской порт"
+  }
+},
+{
+  "model": "kit_of_values.slugvalue",
+  "pk": 20,
+  "fields": {
+    "value": "landing_test_main_s4"
+  }
+},
+{
+  "model": "kit_of_values.slugvalue",
+  "pk": 19,
+  "fields": {
+    "value": "landing_test_main_team"
+  }
+},
+{
+  "model": "kit_of_values.slugvalue",
+  "pk": 18,
+  "fields": {
+    "value": "landing_test_main_problems_item2"
+  }
+},
+{
+  "model": "kit_of_values.slugvalue",
+  "pk": 17,
+  "fields": {
+    "value": "landing_test_main_s2_i3"
+  }
+},
+{
+  "model": "kit_of_values.slugvalue",
+  "pk": 16,
+  "fields": {
+    "value": "landing_test_main_problems_item1"
+  }
+},
+{
+  "model": "kit_of_values.slugvalue",
+  "pk": 15,
+  "fields": {
+    "value": "landing_test_main_problems"
+  }
+},
+{
+  "model": "kit_of_values.slugvalue",
+  "pk": 14,
+  "fields": {
+    "value": "landing_test_main_banner"
+  }
+},
+{
+  "model": "kit_of_values.kit",
+  "pk": 1,
+  "fields": {
+    "name": "kit_landing_test_value",
+    "group": 1,
+    "slug": "kit_landing_test_value",
+    "values": [
+      61,
+      60,
+      59,
+      58,
+      57,
+      56,
+      55,
+      54,
+      53,
+      52,
+      51,
+      50,
+      49,
+      48,
+      47,
+      46,
+      45,
+      44,
+      43,
+      42,
+      41,
+      40,
+      39,
+      38,
+      37,
+      36,
+      35,
+      34,
+      33,
+      32,
+      31,
+      30,
+      29,
+      28,
+      27,
+      26,
+      25,
+      24,
+      23,
+      22,
+      21,
+      5,
+      4,
+      3,
+      2,
+      1
+    ]
+  }
+},
+{
+  "model": "kit_of_values.kit",
+  "pk": 2,
+  "fields": {
+    "name": "kit_landing_test_template",
+    "group": 2,
+    "slug": "kit_landing_test_template",
+    "values": [
+      20,
+      19,
+      18,
+      17,
+      16,
+      15,
+      14,
+      13,
+      12,
+      11,
+      10,
+      9
+    ]
+  }
+}
+]

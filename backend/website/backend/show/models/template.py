@@ -51,6 +51,26 @@ class Template(models.Model):
         return block_html
         # return mark_safe(block_html)
 
+    def render_template(self, kit_of_templates=None,  kit_of_values=None):
+        context = {
+            "kit_of_templates": kit_of_templates,
+            "kit_of_values": kit_of_values,
+        }
+
+        print("render_template context", context)
+
+
+        layout = self.template
+        # print("layout+", layout)
+        template = TemplateRender(layout)
+        # render_context = RequestContext(context)
+        render_context = Context(context)
+        # print("context+", render_context)
+        block_html = template.render(render_context)
+
+        return block_html
+        # return mark_safe(block_html)
+
     class Meta:
         ordering = ('destiny', 'title')
         verbose_name = 'Шаблон'

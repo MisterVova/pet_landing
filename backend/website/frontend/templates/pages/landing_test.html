@@ -1,0 +1,20 @@
+{% load static %}
+{% load show_template_tags%}
+{% autoescape off %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% render_template_by_kit kit_of_templates=kit_of_templates.styles kit_of_values=kit_of_values %}
+</head>
+<body>
+
+{% render_template_by_kit kit_of_templates=kit_of_templates.header kit_of_values=kit_of_values %}
+{% render_template_by_kit kit_of_templates=kit_of_templates.main kit_of_values=kit_of_values %}
+{% render_template_by_kit  kit_of_templates=kit_of_templates.footer kit_of_values=kit_of_values %}
+{% render_template_by_kit  kit_of_templates=kit_of_templates.scripts kit_of_values=kit_of_values %}
+
+</body>
+</html>
+
+{% endautoescape %}

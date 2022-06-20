@@ -82,7 +82,7 @@ class Node:
             ret["value"] = self.value
 
         if (len(ret) != 0) or (len(dct) * len(lst)) != 0:
-            ret["Бардак"] = True
+            ret["MIX"] = True
             if len(dct):
                 ret["dct"] = dct
             if len(lst):

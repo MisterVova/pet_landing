@@ -1,23 +1,48 @@
 from django.contrib import admin
 
-from .models import Group, Value, TextValue, ImageValue, FileValue, Kit
+from .models import Group, Value, TextValue, ImageValue, FileValue, Kit, SlugValue
 
+class SlugInline(admin.TabularInline):
+    model = SlugValue
+
+class TextInline(admin.TabularInline):
+    model = TextValue
+
+class ImageInline(admin.TabularInline):
+    model = ImageValue
+
+class FileInline(admin.TabularInline):
+    model = FileValue
 
 @admin.register(Group)
 class GroupAdmin(admin.ModelAdmin):
     list_display = ["name", ]
-
+    inlines = [SlugInline,TextInline, ImageInline, FileInline,]
 
 @admin.register(Value)
 class ValueAdmin(admin.ModelAdmin):
-    list_display = ["pk", "name", "group", "type", "key" , "__str__"]
+    save_on_top = True
+    list_display = ["pk", "name", "group", "key", "type", ]  # "__str__",
+    list_filter = ["group", "type", ]
+    list_editable = ["name", "key", "group", ]
 
 
 @admin.register(TextValue)
 class TextValueAdmin(ValueAdmin):
     # pass
     list_display = ValueAdmin.list_display + ["value", ]
-    list_editable = ["name", "key",  ]
+    list_editable = ["name", "key", ]
+    # list_editable = [ "key", ]
+
+
+
+
+@admin.register(SlugValue)
+class SlugValueAdmin(ValueAdmin):
+    # pass
+    list_display = ValueAdmin.list_display + ["value", ]
+    list_editable = ["name", "key", "group", "value"]
+
     # list_editable = [ "key", ]
 
 
@@ -31,6 +56,9 @@ class ImageValueAdmin(ValueAdmin):
 class FileValueAdmin(ValueAdmin):
     # pass
     list_display = ValueAdmin.list_display + ["value", ]
+
+
+
 
 
 @admin.register(Kit)

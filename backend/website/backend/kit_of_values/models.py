@@ -24,7 +24,7 @@ class Value(models.Model):
     type = models.CharField(verbose_name="Тип", max_length=16, db_index=True, null=False, blank=True, )
 
     def __str__(self):
-        return f"{self.name} | {self.group} | {self.type} | {self.key}"
+        return f"{self.group} | {self.name} | {self.type} | {self.key}"
 
     def save(self, *args, **kwargs):
         self.type = self.TYPE
@@ -78,6 +78,18 @@ class TextValue(Value):
         verbose_name_plural = 'Тексты'
 
 
+class SlugValue(Value):
+    TYPE = "Slug"
+    value = models.SlugField(max_length=150, verbose_name='ЧПУ', blank=False)
+
+    def get_value(self):
+        return self.value
+
+    class Meta:
+        ordering = ('name',)
+        verbose_name = 'Slug'
+        verbose_name_plural = 'Slugs'
+
 class Kit(models.Model):
     name = models.CharField(verbose_name="Заголовок", max_length=64, db_index=True)
     group = models.ForeignKey(verbose_name='Группа', to=Group, on_delete=models.CASCADE, related_name='kits')
@@ -85,7 +97,7 @@ class Kit(models.Model):
     slug = models.SlugField(max_length=150, verbose_name='ЧПУ', unique=True, blank=False, db_index=True)
 
     def __str__(self):
-        return f"{self.name} | {self.group}"
+        return f"{self.group} | {self.name}"
 
     def get_value(self):
         node = Node("kit_dict", None)
@@ -98,6 +110,8 @@ class Kit(models.Model):
                 v = ImageValue.objects.get(pk=item.pk)
             if item.type == FileValue.TYPE:
                 v = FileValue.objects.get(pk=item.pk)
+            if item.type == SlugValue.TYPE:
+                v = SlugValue.objects.get(pk=item.pk)
 
             if v:
                 v = v.get_value()

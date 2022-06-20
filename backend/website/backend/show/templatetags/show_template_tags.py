@@ -5,6 +5,18 @@ from show.models import Template
 register = template.Library()
 
 
+@register.simple_tag(name="my_tag_test")
+def template_test(p1=None, p2=None, p3=None):
+    print(type(p1), p1)
+    print(type(p2), p2)
+    print(type(p3), p3)
+    return f"""<h5>::blocks_test::</h5><br>
+            p1={type(p1)} | {p1}            <br>
+            p2={type(p2)} | {p2}            <br>
+            p3={type(p3)} | {p3}            <br>
+           """
+
+
 # template
 # @register.simple_tag(name="render_template_to_html")
 # def template_render_to_html(blocks, context):
@@ -20,22 +32,14 @@ register = template.Library()
 #
 #     # return f"render::{block.render_to_html(context)}::render"
 
-
-@register.simple_tag(name="render_html")
-def template_render_to_html(my_template: Template, obj=None, other=None):
+@register.simple_tag(name="render_template")
+def render_template_to_html(my_template: Template, kit_of_templates=None, kit_of_values=None):
     # context = {
     #     "object": obj,
     #     "other": other,
     # }
-    return my_template.render_to_html(obj, other)
+    return my_template.render_template(kit_of_templates=kit_of_templates, kit_of_values=kit_of_values)
     # return f"render::{template.render_to_html(obj,other)}::render"
-
-
-@register.simple_tag(name="my_tag_test")
-def template_test(p1=None, p2=None, p3=None):
-    return f"""<h5>::blocks_test::</h5><br>
-            p1={p1}<br>p2={p2}<br>p3={p3}
-           """
 
 
 #
@@ -51,8 +55,38 @@ def template_test(p1=None, p2=None, p3=None):
 #
 #     return ret
 
-@register.simple_tag(name="render_template_by_slug")
-def render_template_by_slug_html(slug, obj=None, other=None):
+@register.simple_tag(name="render_template_by_kit")
+def render_template_by_kit_to_html(kit_of_templates: dict = None, kit_of_values: dict = None):
+    # print("kit_of_templates", kit_of_templates)
+    # print("kit_of_values", kit_of_values)
+    if type(kit_of_templates) != dict:
+        return f"<h1>Template.DoesNotExist</h1>"
+
+    if kit_of_templates.get("MIX"):
+        slug = kit_of_templates.get("dct").get("slug")
+    else:
+        slug = kit_of_templates.get("slug")
+
+    try:
+        my_template = Template.objects.get(slug=slug)
+    except Template.DoesNotExist:
+        return f"<h1>Template.DoesNotExist</h1><br>slug={slug}<br>kit_of_templates={kit_of_templates}<br>kit_of_values={kit_of_values} "
+
+    return my_template.render_template(kit_of_templates, kit_of_values)
+
+
+@register.simple_tag(name="render_template_by_slug_test")
+def render_template_by_slug_to_html_test(slug, kit_of_templates=None, kit_of_values=None):
+    print("slug", slug)
+    print("kit_of_templates", kit_of_templates)
+    print("kit_of_values", kit_of_values)
+
+    return f"""
+    <br>slug={slug}
+    <br>kit_of_templates={kit_of_templates}
+    <br>kit_of_values={kit_of_values}
+    <br> 
+    """
     # context = {
     #     "object": obj,
     #     "other": other,
@@ -64,4 +98,3 @@ def render_template_by_slug_html(slug, obj=None, other=None):
         return f"<h1>Template.DoesNotExist</h1><br>slug={slug}<br>obj={obj}<br>other={other} "
 
     return my_template.render_to_html(obj, other)
-    # return f"render::{my_template.render_to_html(obj,other)}::render"

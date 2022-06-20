@@ -1,8 +1,24 @@
 {% extends 'base.html' %}
 
+
 {% block content %}
-
 {% include 'include/breadcrumb.html' %}
-
 <h1>{{ object.title }}</h1>
+
+
+{# Добавляем содержимое Страницы согласно шаблону  #}
+{% load show_template_tags%}
+{% autoescape off %}
+
+{# {% render_html my_template=object.html_template obj=object other=other %} #}
+{% render_html_test my_template=object.html_template obj=object other=other %}
+{# {% my_tag_test p1=object.html_template p3=kit_values p2=object %} #}
+
+
+{% endautoescape %}
+{# end Добавляем содержимое Страницы согласно шаблону  #}
+
+
+
+
 {% endblock %}

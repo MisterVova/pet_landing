@@ -1,0 +1,11 @@
+[
+{
+  "model": "landing.landingpage",
+  "pk": 1,
+  "fields": {
+    "html_template": 1,
+    "kit_template": 2,
+    "kit_values": 1
+  }
+}
+]
