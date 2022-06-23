@@ -1,5 +1,6 @@
 from django.db import models
 from garpix_utils.file import get_file_path
+from garpixcms.settings import MEDIA_URL
 
 from kit_of_values.util import Node
 
@@ -42,9 +43,13 @@ class Value(models.Model):
 class ImageValue(Value):
     TYPE = "Image"
     value = models.ImageField(verbose_name="Изображение", blank=False, null=False, upload_to=get_file_path, )
+    alt = models.CharField(max_length=150, verbose_name='alt', blank=False, default="")
 
     def get_value(self):
-        return self.value.name
+        return {
+            "alt": self.alt,
+            "url": f"{self.value.url}",
+        }
 
     class Meta:
         ordering = ('name',)
@@ -57,7 +62,13 @@ class FileValue(Value):
     value = models.FileField(verbose_name="Файл", blank=False, null=False, upload_to=get_file_path, )
 
     def get_value(self):
-        return self.value.name
+        # return self.value.name
+        return {
+            # "href": f"{MEDIA_URL}{self.value.name}",
+            "name": self.name,
+            "url": self.value.url,
+            # "uri": self.value.uri,
+        }
 
     class Meta:
         ordering = ('name',)
@@ -90,6 +101,19 @@ class SlugValue(Value):
         verbose_name = 'Slug'
         verbose_name_plural = 'Slugs'
 
+
+class CharValue(Value):
+    TYPE = "Char"
+    value = models.CharField(max_length=254, verbose_name='CharField', blank=False)
+
+    def get_value(self):
+        return self.value
+
+    class Meta:
+        ordering = ('name',)
+        verbose_name = 'Char'
+        verbose_name_plural = 'Chars'
+
 class Kit(models.Model):
     name = models.CharField(verbose_name="Заголовок", max_length=64, db_index=True)
     group = models.ForeignKey(verbose_name='Группа', to=Group, on_delete=models.CASCADE, related_name='kits')
@@ -112,7 +136,8 @@ class Kit(models.Model):
                 v = FileValue.objects.get(pk=item.pk)
             if item.type == SlugValue.TYPE:
                 v = SlugValue.objects.get(pk=item.pk)
-
+            if item.type == CharValue.TYPE:
+                v = CharValue.objects.get(pk=item.pk)
             if v:
                 v = v.get_value()
             node.add_value(lst_key=self.split_key(item.key), value=v)
@@ -127,3 +152,15 @@ class Kit(models.Model):
         ordering = ('name',)
         verbose_name = 'Набор'
         verbose_name_plural = 'Наборы'
+
+
+class Tag(models.Model):
+    name = models.CharField(verbose_name="имя тега", max_length=254, unique=True)
+
+    def __str__(self):
+        return f'{self.name}'
+
+    class Meta:
+        verbose_name = "Тег"
+        verbose_name_plural = "Теги"
+        ordering = ("name",)

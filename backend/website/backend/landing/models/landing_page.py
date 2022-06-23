@@ -19,7 +19,6 @@ class LandingPage(BasePage):
         ordering = ("-created_at",)
 
     def get_context(self, request=None, *args, **kwargs):
-
         context = super().get_context(request, *args, **kwargs)
         # print("self.kit_template.get_value()",self.kit_template.get_value())
 
@@ -29,7 +28,5 @@ class LandingPage(BasePage):
 
         }
 
-
         context.update(add_context)
         return context
-
