@@ -1,19 +1,7 @@
-{% extends 'base.html' %}
 
-{% block content %}
-
-{% include 'include/breadcrumb.html' %}
-
-<h1>{{ object.title }}</h1>
-
-{% for obj in paginated_object_list %}
-    <div>
-        <p><a href="{{ obj.get_absolute_url }}">{{ obj.title }}</a></p>
-    </div>
-{% empty %}
-    <div>Записей пока нет.</div>
-{% endfor %}
-
-{% include 'include/pagination.html' %}
-
-{% endblock %}
+{# Добавляем содержимое Страницы согласно шаблону #}
+{% load show_template_tags%}
+{% autoescape off %}
+{% render_template_context my_template=object.html_template kit_of_templates=kit_of_templates kit_of_values=kit_of_values init_object=object global_context=global %}
+{% endautoescape %}
+{# end Добавляем содержимое Страницы согласно шаблону #}

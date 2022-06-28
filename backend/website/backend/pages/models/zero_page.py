@@ -2,7 +2,7 @@ from django.db import models
 from garpix_page.models import BasePage
 from kit_of_values.models import Kit
 from show.models import Template
-
+from global_settings import global_context
 
 class ZeroPage(BasePage):
     # template = "pages/zero.html"
@@ -16,6 +16,17 @@ class ZeroPage(BasePage):
         verbose_name_plural = "Zeros"
         ordering = ("-created_at",)
 
+    # def get_context(self, request=None, *args, **kwargs):
+    #     context = super().get_context(request, *args, **kwargs)
+    #     # print("self.kit_template.get_value()",self.kit_template.get_value())
+    #
+    #     add_context = {
+    #         "kit_of_templates": self.kit_template.get_value(),
+    #         "kit_of_values": self.kit_values.get_value(),
+    #     }
+    #
+    #     context.update(add_context)
+    #     return context
     def get_context(self, request=None, *args, **kwargs):
         context = super().get_context(request, *args, **kwargs)
         # print("self.kit_template.get_value()",self.kit_template.get_value())
@@ -23,6 +34,7 @@ class ZeroPage(BasePage):
         add_context = {
             "kit_of_templates": self.kit_template.get_value(),
             "kit_of_values": self.kit_values.get_value(),
+            "global": global_context.global_context(request, self),
         }
 
         context.update(add_context)

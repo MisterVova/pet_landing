@@ -1,2 +1,7 @@
 
-все ок
+{# Добавляем содержимое Страницы согласно шаблону #}
+{% load show_template_tags%}
+{% autoescape off %}
+{% render_template_context my_template=object.html_template kit_of_templates=kit_of_templates kit_of_values=kit_of_values init_object=object global_context=global %}
+{% endautoescape %}
+{# end Добавляем содержимое Страницы согласно шаблону #}

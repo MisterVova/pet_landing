@@ -35,7 +35,7 @@ class Value(models.Model):
         return None
 
     class Meta:
-        ordering = ('-pk', 'name',)
+        ordering = ("group", '-pk', )
         verbose_name = 'Значение'
         verbose_name_plural = 'Значения'
 
@@ -149,7 +149,7 @@ class Kit(models.Model):
         return lst_k
 
     class Meta:
-        ordering = ('name',)
+        ordering = ("group", 'name',)
         verbose_name = 'Набор'
         verbose_name_plural = 'Наборы'
 

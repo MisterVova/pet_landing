@@ -1,3 +1,6 @@
 from garpixcms.urls import *  # noqa
 
-urlpatterns = [] + urlpatterns  # noqa
+urlpatterns = [
+
+path('forms/', include('forms.urls')),
+              ] + urlpatterns  # noqa

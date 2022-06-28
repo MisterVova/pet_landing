@@ -81,20 +81,72 @@ def render_template_by_slug_to_html_test(slug, kit_of_templates=None, kit_of_val
     print("kit_of_templates", kit_of_templates)
     print("kit_of_values", kit_of_values)
 
-    return f"""
-    <br>slug={slug}
-    <br>kit_of_templates={kit_of_templates}
-    <br>kit_of_values={kit_of_values}
-    <br> 
-    """
-    # context = {
-    #     "object": obj,
-    #     "other": other,
-    # }
+    # return f"""
+    # <br>slug={slug}
+    # <br>kit_of_templates={kit_of_templates}
+    # <br>kit_of_values={kit_of_values}
+    # <br>
+    # """
+    # # context = {
+    # #     "object": obj,
+    # #     "other": other,
+    # # }
     from show.models.template import Template
     try:
         my_template = Template.objects.get(slug=slug)
     except Template.DoesNotExist:
-        return f"<h1>Template.DoesNotExist</h1><br>slug={slug}<br>obj={obj}<br>other={other} "
+        return f"""
+                <br>vvvvvvvvvvvvvvvvvvvvvvvvvvvv
+                <h1>Template.DoesNotExist</h1>
+                <br>slug={slug}
+                <br>kit_of_templates={kit_of_templates}
+                <br>kit_of_values={kit_of_values} 
+                <br>^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                """
 
-    return my_template.render_to_html(obj, other)
+    return my_template.render_to_html()
+
+
+@register.simple_tag(name="render_template_context")
+def render_template_context_to_html(my_template: Template, kit_of_templates=None, kit_of_values=None, init_object=None, global_context=None):
+    context = {
+        "kit_of_templates": kit_of_templates,
+        "kit_of_values": kit_of_values,
+        "object": init_object,
+        "global": global_context,
+    }
+
+    # return my_template.page_render(kit_of_templates=kit_of_templates, kit_of_values=kit_of_values, init_object=None, global_context=None)
+    return my_template.render_template_context(context=context)
+
+
+@register.simple_tag(name="render_template_context_by_kit")
+def render_template_context_by_kit_to_html(kit_of_templates: dict = None, kit_of_values: dict = None, init_object=None, global_context=None):
+    if type(kit_of_templates) != dict:
+        return f"<h1>Template.DoesNotExist</h1>"
+
+    if kit_of_templates.get("MIX"):
+        slug = kit_of_templates.get("dct").get("slug")
+    else:
+        slug = kit_of_templates.get("slug")
+
+    try:
+        my_template = Template.objects.get(slug=slug)
+    except Template.DoesNotExist:
+        return f"""
+                <br>vvvvvvvvvvvvvvvvvvvvvvvvvvvv
+                <h1>Template.DoesNotExist</h1>
+                <br>slug={slug}
+                <br>kit_of_templates={kit_of_templates}
+                <br>kit_of_values={kit_of_values} 
+                <br>^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                """
+
+    context = {
+        "kit_of_templates": kit_of_templates,
+        "kit_of_values": kit_of_values,
+        "object": init_object,
+        "global": global_context,
+    }
+    # print(init_object.tags.all())
+    return my_template.render_template_context(context=context)
